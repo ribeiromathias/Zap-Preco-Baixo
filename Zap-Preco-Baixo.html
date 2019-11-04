@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+	<meta charset="UTF-8">
+	<meta name="viewport" content="" width=device-width , initial-scale=1 , shrink-to-fit=no>
+	<title>Document</title>
+
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+
+	<title>Bootstrap - Modal</title>
+	<style>
+		@import url('fonts/style.css');
+
+
+	  .card {border: none;}
+	  .bg-lightgray {background-color: lightgray;}
+	  .navbar-light .navbar-toggler-icon {
+	  	background-image: url('img/menu.png');
+	  }
+	  .navbar-light .navbar-toggler {
+	  	border-color: #000;
+	  }
+
+	  .botao {
+	  	padding: 12px 55px 10px;
+	  	border: 1px solid black;
+	  	background-color: white;
+	  	color: black;
+	  	border-radius: 30px;
+	  	font-family: 'SamsungSharpSans-Bold';
+	  	font-weight: bold;
+	  	outline: none;
+	  }
+
+	  .botao:hover {
+	  	color: #FFF;
+	  	background-color: #000;
+	  	text-decoration: none;
+	  }
+
+	  .form-control::-webkit-input-placeholder {
+	  	color:#000;
+	  }
+
+	  .form-control::-moz-input-placeholder {
+	  	color:#000;
+	  }
+
+	  .form-control::-ms-input-placeholder {
+	  	color:#000;
+	  }
+
+	  .form-control {
+	  	color:#000;
+	  }
+
+	  textarea {
+	  	height: 160px !important;
+	  	resize: none;
+	  }
+
+      .list-group-item {
+      	border:none;
+      }
+
+      footer h4 {
+      	font-size: 18px;
+      }
+
+	</style>
+</head>
+
+<body>
+   <div class="bg-lightgray">
+	<div class="container">
+		<div class="row">
+			<div class="col-12">
+				<nav class="navbar navbar-expand-lg navbar-light bg-lightgray">
+				  <a class="navbar-brand" href="#"><img src="img/samsung.png"></a>
+				  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#menuPrincipal" aria-controls="menuPrincipal" aria-expanded="false" aria-label="Alterna navegação">
+				    <span class="navbar-toggler-icon"></span>
+				  </button>
+
+				  <div class="collapse navbar-collapse" id="menuPrincipal">
+				   <ul class="navbar-nav ml-auto"> <!-- posição da nav bar direita ml, esquerda mr -->
+				     <li class="nav-item active">
+				       <a class="nav-link" href="#">Home <span class="sr-only">(página atual)</span></a>
+				     </li>
+				     <li class="nav-item">
+				       <a class="nav-link" href="#">Sobre</a>
+				     </li>
+				     <li class="nav-item dropdown">
+				       <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+				          Produto
+				       </a>
+				  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+				       <a class="dropdown-item" href="#">Samsung S8</a>
+				       <a class="dropdown-item" href="#">Samsung S9</a>
+				       <a class="dropdown-item" href="#">Samsung S10</a>
+				  <div class="dropdown-divider"></div>
+				       <a class="dropdown-item" href="#">Galaxy Tabs</a>
+				  </div>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Serviços</a>
+				      </li>
+				      <li class="nav-item">
+				        <a class="nav-link" href="#">Contatos</a>
+				      </li>
+				    </ul>
+				    <!-- <form class="form-inline my-2 my-lg-0">
+				      <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+				      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+				    </form> -->
+				  </div>
+</nav>
+			</div>
+		</div>
+		</div>
+	</div>
+
+	<div class="container-fluid px-0">
+		<div class="row">
+			<div class="col-12"></div>
+		</div>
+	</div>
+
+	<div id="slider" class="carousel slide carousel-fade" data-ride="carousel">
+		<ol class="carousel-indicators">
+	    <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+	    <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+  		</ol>
+     <div class="carousel-inner">
+      
+      <div class="carousel-item active">
+      <img class="d-block w-100" src="img/banner01.png" alt="Primeiro Slide">
+      <div class="carousel-caption d-none d-md-block">
+	    <h5>ZAP DO PREÇO BAIXO</h5>
+	    <p>no celular</p>
+	  	</div>
+      </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="img/banner02.png" alt="Segundo Slide">
+      <div class="carousel-caption d-none d-md-block">
+    	<h5>...</h5>
+   		<p>...</p>
+  		</div>
+      </div>
+      <div class="carousel-item">
+      <img class="d-block w-100" src="img/banner03.png" alt="Terceiro Slide">
+      <div class="carousel-caption d-none d-md-block">
+    	<h5>...</h5>
+    	<p>...</p>
+  		</div>
+    </div>
+  </div>
+   <a class="carousel-control-prev" href="#slider" role="button" data-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="sr-only">Anterior</span>
+  </a>
+  <a class="carousel-control-next" href="#slider" role="button" data-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="sr-only">Próximo</span>
+  </a>
+</div>
+</div>
+</div>
+</div>
+
+
+	<div class="container">
+		<div class="row my-4">
+			<div class="col-12 my-4">
+				<h1 class="text-center">Últimas Novidades</h1>
+			</div>
+		</div>
+	    <div class="row">
+			<div class="col-3">
+			  <div class="card">
+			  	 <img class="card-img-top" src="img/celular.png" alt="CellPhone">
+  					<div class="card-body text-center">
+    					<h5 class="card-title">Samsung S9</h5>
+    					<h6 class="card-subtitle my-3 text-muted">Modelo S9-XX</h6>
+    					<div class="card-header">
+    						Informações
+    					</div>
+    					
+    					<ul class="list-group list-group-flush">
+					    <li class="list-group-item">4Gb de Memória</li>
+					    <li class="list-group-item">128Gb</li>
+					    <li class="list-group-item">Tecnologia 4G</li>
+					  </ul>
+					
+    					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+    					<h6 class="card-subtitle my-3">R$ 1.999,99</h6>
+    					<a href="#" class="btn btn-primary">Comprar</a>
+    				</div>
+  				</div>
+			</div>
+
+            <div class="col-3">
+			  <div class="card">
+			  	 <img class="card-img-top" src="img/celular.png" alt="CellPhone">
+  					<div class="card-body text-center">
+    					<h5 class="card-title">Samsung S9</h5>
+    					<h6 class="card-subtitle my-3 text-muted">Modelo S9-XX</h6>
+    					<div class="card-header">
+    						Informações
+    					</div>
+    					
+    					<ul class="list-group list-group-flush">
+					    <li class="list-group-item">4Gb de Memória</li>
+					    <li class="list-group-item">128Gb</li>
+					    <li class="list-group-item">Tecnologia 4G</li>
+					  </ul>
+					
+    					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+    					<h6 class="card-subtitle my-3">R$ 1.999,99</h6>
+    					<a href="#" class="btn btn-primary">Comprar</a>
+    				</div>
+  				</div>
+			</div>
+
+			<div class="col-3">
+			  <div class="card">
+			  	 <img class="card-img-top" src="img/celular.png" alt="CellPhone">
+  					<div class="card-body text-center">
+    					<h5 class="card-title">Samsung S9</h5>
+    					<h6 class="card-subtitle my-3 text-muted">Modelo S9-XX</h6>
+    					<div class="card-header">Informações</div>
+    					
+    					<ul class="list-group list-group-flush">
+					    <li class="list-group-item">4Gb de Memória</li>
+					    <li class="list-group-item">128Gb</li>
+					    <li class="list-group-item">Tecnologia 4G</li>
+					  </ul>
+					
+    					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+    					<h6 class="card-subtitle my-3">R$ 1.999,99</h6>
+    					<a href="#" class="btn btn-primary">Comprar</a>
+    				</div>
+  				</div>
+			</div>
+
+			<div class="col-3">
+			  <div class="card">
+			  	 <img class="card-img-top" src="img/celular.png" alt="CellPhone">
+  					<div class="card-body text-center">
+    					<h5 class="card-title">Samsung S9</h5>
+    					<h6 class="card-subtitle my-3 text-muted">Modelo S9-XX</h6>
+    					<div class="card-header">
+    						Informações
+    					</div>
+    					
+    					<ul class="list-group list-group-flush">
+					    <li class="list-group-item">4Gb de Memória</li>
+					    <li class="list-group-item">128Gb</li>
+					    <li class="list-group-item">Tecnologia 4G</li>
+					  </ul>
+					
+    					<p class="card-text">Um exemplo de texto rápido para construir o título do card e fazer preencher o conteúdo do card.</p>
+    					<h6 class="card-subtitle my-3">R$ 1.999,99</h6>
+    					<a href="#" class="btn btn-primary">Comprar</a>
+    				</div>
+  				</div>
+			</div>
+		</div>
+	</div>
+    
+    <div class="container">
+		<div class="row my-4">
+		</div>
+	    <div class="row align-items-center">
+			<div class="col-6">
+			  <div class="card">
+  					<div class="card-body text-left">
+    					<h2 class="card-title">Galaxy S10+</h2>
+    					<p>Otimize a potência com o Galaxy S10+. Dê vida às suas visões com cinco câmeras de nível profissional, testemunhando como cada foto é otimizada no Display infinity-O. Compartilhe vídeos em 4K UHD e sua bateria. E viva mais inteligente com um desempenho adaptável e rotinas personalizadas.</p>   
+    					<a href="#" class="botao" data-toggle="modal" data-target="#vejamaisS10">Detalhes do produto</a>
+    				</div>
+  				</div>
+
+			</div>
+
+            <div class="col-6">
+			  <div class="">
+			  	 <img class="card-img-top md-fluid" src="img/s10.webp" alt="CellPhone">
+  					<div class="card-body text-center">
+    				</div>
+  			  </div>
+	        </div>
+
+    <div class="container my-5 py-5">
+    	<div class="row">
+    	  <div class="col-12 mb-5">
+    	  	<h2 class="text-center">Contato</h2>
+    	  </div>
+    	</div>
+
+    	<form>
+		  <div class="form-row justify-content-center">
+		    <div class="form-group col-4">
+		      <input type="text" class="form-control" placeholder="Nome">
+		    </div>
+		    <div class="form-group col-4">
+		      <input type="text" class="form-control" placeholder="Sobrenome">
+		    </div>
+		    <div class="form-group col-8">
+		      <input type="email" class="form-control" placeholder="Email">
+		    </div>
+		    <div class="form-group col-8">
+		      <select class="form-control">
+		        <option selected>Escolher...</option>
+		      	<option value="1">Samsung S10</option>
+		      	<option value="1">Samsung S9</option>
+		      	<option value="1">Samsung S8</option>
+		      	<option value="1">Galaxy Tabs</option>
+		      </select>
+		    </div>
+		    <div class="form-group col-8">
+		    	<textarea class="form-control" placeholder="Digite sua mensagem"></textarea>
+		    </div>
+		    <div class="form-group col-8 text-center">
+		    	<input type="submit" class="btn btn-dark" value="Enviar">
+		   </div>
+		  </div>
+		</form>
+	</div>
+
+	<footer class="container">
+		<div class="row">
+			<div class="col-5">
+				<h4 class="text-uppercase">Produtos e Serviços</h4>
+				<ul class="list-group list-group-flush w-50 float-left">
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				</ul>
+				<ul class="list-group list-group-flush w-50 float-left">
+				  <li class="list-group-item">
+				  <a href="#">Tablet</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Tablet</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Tablet</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Tablet</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Tablet</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="col">
+				<h4 class="text-uppercase">Produtos e Serviços</h4>
+				<ul class="list-group list-group-flush w-50 float-left">
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="col">
+				<h4 class="text-uppercase">Produtos e Serviços</h4>
+				<ul class="list-group list-group-flush w-50 float-left">
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				</ul>
+			</div>
+			<div class="col">
+				<h4 class="text-uppercase">Produtos e Serviços</h4>
+				<ul class="list-group list-group-flush w-50 float-left">
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				  <li class="list-group-item">
+				  <a href="#">Smartphones</a>
+				  </li>
+				</ul>
+			</div>
+		</div>
+	</footer>
+
+	<!-- Botão para acionar modal -->
+	<button type="button" class="btn btn-primary" data-toggle="modal" data-target="#vejamaisS10">
+	  Abrir modal de demonstração
+	</button>
+
+	<!-- Modal -->
+	<div class="modal fade" id="vejamaisS10" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+	  <div class="modal-dialog" role="document">
+	    <div class="modal-content">
+	      <div class="modal-header">
+	        <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+	        <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+	          <span aria-hidden="true">&times;</span>
+	        </button>
+	      </div>
+	      <div class="modal-body">
+	        <table class="table table-striped">
+			  <thead>
+			    <tr>
+			      <th scope="col">#</th>
+			      <th scope="col">Primeiro</th>
+			      <th scope="col">Último</th>
+			      <th scope="col">Nickname</th>
+			    </tr>
+			  </thead>
+			  <tbody>
+			    <tr>
+			      <th scope="row">1</th>
+			      <td>Mark</td>
+			      <td>Otto</td>
+			      <td>@mdo</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">2</th>
+			      <td>Jacob</td>
+			      <td>Thornton</td>
+			      <td>@fat</td>
+			    </tr>
+			    <tr>
+			      <th scope="row">3</th>
+			      <td>Larry</td>
+			      <td>the Bird</td>
+			      <td>@twitter</td>
+			    </tr>
+			  </tbody>
+			</table>
+	      </div>
+	      <div class="modal-footer">
+	        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+	        <button type="button" class="btn btn-primary">Salvar mudanças</button>
+	      </div>
+	    </div>
+	  </div>
+	</div>
+
+
+<script src="js/jquery-3.3.1.slim.min.js"></script>
+
+<script src="js/popper.min.js"></script>
+
+<script src="js/bootstrap.min.js"></script>
+
+<script>
+
+	$('.carousel').carousel({
+  interval: 2500
+})
+
+</script>
+	
+</body>
+</html>
